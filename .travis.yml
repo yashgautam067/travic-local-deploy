@@ -1,1 +1,10 @@
+dist: focal
+language: shell
+
+script:
+  - echo "✅ Travis build successful!"
+
+after_success:
+  - echo "🚀 Triggering local deploy listener..."
+  - curl -X POST https://62de546eaa83.ngrok-free.app/deploy
 
